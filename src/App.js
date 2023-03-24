@@ -13,14 +13,13 @@ function App() {
   }
   
   const checkBoxHandler = (event) => {
-
     setDisabled(event.target.checked)
   }
   
   return (
     <div>
       <button 
-      style={{backgroundColor: buttonColor}}
+      style={{backgroundColor: disabled ? 'gray' : buttonColor}}
       onClick={changeButtonColor}
       disabled={disabled}
       >Change to {newButtonColor}</button>
